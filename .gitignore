@@ -1,0 +1,31 @@
+# 비밀 정보
+.env
+
+# 현장 자료 (도구만 올림)
+*.xlsx
+*.xls
+*.csv
+*.dwg
+*.dxf
+*.pdf
+*.hwp
+*.hwpx
+*.ai
+*.xsm
+*.zip
+*.jpg
+*.png
+data/
+
+# 실행 시 생기는 파일
+__pycache__/
+.venv/
+node_modules/
+~$*
+Thumbs.db
+
+# graphify 결과물 (다시 만들 수 있음)
+graphify-out/
+
+# 외부에서 받은 MCP 서버 (install.bat이 다시 받음)
+09_클로드 환경(플러그인)/hwp-mcp/
