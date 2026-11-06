@@ -37,6 +37,7 @@
             if ($cmd -and $cmd.Source -notlike '*WindowsApps*') { $py = $cmd.Source; break }  # WindowsApps = 스토어 안내용 가짜 python
         }
         if ($py) {
+            $ErrorActionPreference = 'Continue'  # pip 경고(stderr)가 PowerShell 5.1에서 오류로 바뀌어 멈추지 않게
             & $py -m pip install openpyxl pymupdf pywin32 ezdxf pillow zstandard
             if ($LASTEXITCODE -ne 0) { Write-Warning 'pip 설치가 실패했습니다. 위 메시지를 확인하세요.' }
         } else {
