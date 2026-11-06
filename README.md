@@ -3,6 +3,22 @@
 지반조사 보고서 작업(2026.10~11, 500kV HVDC 동해안~신가평 10공구)에서 Claude와 같이 만든 **파이썬 도구와 작업 요령** 모음.
 결과물(보고서·엑셀·그림)은 들어 있지 않고, 다음 과업에서 다시 쓸 **방법**만 모았다.
 
+## 설치 (깃 없이)
+
+Windows PowerShell에 아래 한 줄을 붙여 넣는다.
+
+```powershell
+irm https://raw.githubusercontent.com/sdcforworking/geotech-report-skill/main/install.ps1 | iex
+```
+
+- 스킬을 `%USERPROFILE%\.claude\skills\geotech-report`에 푼다. 이미 있으면 `geotech-report.bak-날짜시각`으로 옮겨 두고 지우지 않는다.
+- Python이 있으면 필요한 패키지(openpyxl, pymupdf, pywin32, ezdxf, pillow, zstandard)를 깐다. 없으면 안내만 한다.
+- 다 되면 Claude Code를 다시 연다.
+- 손으로 하려면: 위 **Code → Download ZIP** → 압축 풀기 → 폴더 이름을 `geotech-report`로 바꿔 `%USERPROFILE%\.claude\skills\` 안에 넣는다.
+- 필요한 프로그램: Python 3.10+. 한글·엑셀 COM 도구는 한글·엑셀이, ai 레이어 도구는 VectorCraft가 있어야 한다.
+- `user-CLAUDE.md`는 만든 사람의 개인 규칙이다. 그대로 복사하지 말고 참고만 한다.
+- `09_클로드 환경(플러그인)/install.bat`은 Git·Node.js가 필요한 별도 도구 설치용이다.
+
 ## 폴더
 
 | 폴더 | 하는 일 | 바로 쓰는 도구 |
